@@ -173,7 +173,7 @@ async function processarAposta(vencedorId, perdedorId, valor) {
 
 #### Configuração da conta conectada
 - [x] Criar um usuário com a subconta personalizada e retonar id
-- [ ] Atualizar os dados KYC da subconta  
+- [x] Atualizar os dados KYC da subconta  
 
 #### Gerenciamento financeiro  
 - [ ] Fazer depósito via Pix  
