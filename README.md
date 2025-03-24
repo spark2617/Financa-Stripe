@@ -168,3 +168,18 @@ async function processarAposta(vencedorId, perdedorId, valor) {
 }
 
 ```
+
+## Testes das funções Stripe
+
+#### Configuração da conta conectada
+- [x] Criar um usuário com a subconta personalizada e retonar id
+- [ ] Atualizar os dados KYC da subconta  
+
+#### Gerenciamento financeiro  
+- [ ] Fazer depósito via Pix  
+- [ ] Consultar saldo da subconta do usuário  
+
+#### Apostas e transações  
+- [ ] Descontar taxa de R$0,50 no final da partida(desconto sendo aplicado no prêmio)
+- [ ] Processar aposta e transferir prêmio ao vencedor  
+
