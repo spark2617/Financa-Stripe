@@ -177,7 +177,7 @@ async function processarAposta(vencedorId, perdedorId, valor) {
 
 #### Gerenciamento financeiro  
 - [ ] Fazer depósito via Pix  
-- [ ] Consultar saldo da subconta do usuário  
+- [x] Consultar saldo da subconta do usuário  
 
 #### Apostas e transações  
 - [ ] Descontar taxa de R$0,50 no final da partida(desconto sendo aplicado no prêmio)
