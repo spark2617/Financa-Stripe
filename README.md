@@ -66,23 +66,18 @@ async function atualizarDadosKYC(accountId) {
 
 ```javascript
 
-async function criarDepositoComPix(valor, email) {
-  
-  const paymentIntent = await stripe.paymentIntents.create({
-    amount: valor, 
-    currency: "brl",
-    payment_method_types: ['pix'], 
-    receipt_email: email, // Enviar recibo por e-mail(opcional)
-  });
+async function criarDepositoComPix(valor, usuarioStripeId) {
+    const paymentIntent = await stripe.paymentIntents.create({
+        amount: valor,
+        currency: "brl",
+        payment_method_types: ['pix'],
+        transfer_data: {
+            destination: usuarioStripeId, 
+        },
+    });
 
-  
-  const emvCode = paymentIntent.next_action.display_qr_code;
-  
-  console.log("Pagamento com Pix criado com sucesso!");
-  console.log("ID do PaymentIntent:", paymentIntent.id);
-  console.log("Código EMV do Pix:", emvCode);
-  
-  return { paymentIntent, emvCode };
+    console.log(`Pagamento de R$${valor / 100} criado para o usuário ${usuarioStripeId}!`);
+    return paymentIntent;
 }
 
 ```
